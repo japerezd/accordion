@@ -1,0 +1,115 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( to bottom right, rgb(233, 164, 52),40%  , #fb7a7a);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+}
+
+/* Sign + putting it in the right side */
+.btn-accordion span{
+    position: absolute;
+    align-items: center;
+    align-content: center;
+    right: 50px;
+    top: 25px;
+    font-size: 3rem;
+}
+
+.accordion{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5rem;
+    left:50rem;
+    user-select: none;
+}
+
+
+.accordion--ingredient.active{
+    /* display: block; */
+    /* display: flex;
+    flex-direction: row; */
+    /* animation: displaying 0.4s ease-out; */
+}
+
+
+.accordion--ingredient{
+    padding-top: 5px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 8px;
+    /* padding: 30px; */
+    overflow: hidden;
+    /* display: none; */
+    width: 700px;
+    font-size: 1.8rem;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    /* animation: display 0.3s ease-out; */
+}
+
+.btn-accordion{
+    position: relative;
+    padding: 30px;
+    width: 700px;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+
+/* Inside of the .accordion--ingredient */
+.image-ingredient img{
+    width: 250px;
+    margin-right: 2.3rem;
+}
+
+/* .image-ingredient img */
+
+/* color divs in .accordion */
+.btn-accordion:nth-child(1),
+.accordion--ingredient:nth-child(2){
+    background-color: #cea43d;
+}
+
+.btn-accordion:nth-child(3),
+.accordion--ingredient:nth-child(4){
+    background-color: #41eb8eb7;
+}
+
+.btn-accordion:nth-child(5),
+.accordion--ingredient:nth-child(6){
+    background-color: #ff6347;
+}
+
+.btn-accordion:nth-child(7),
+.accordion--ingredient:nth-child(8){
+    background-color: #7C3C2D;
+}
+
+/* border radius top and bottom */
+.btn-accordion:first-child{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+.accordion--ingredient:nth-child(8){
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 10px;
+}
+
+/* icon + to span */
+.btn-accordion span::after{
+    content: '\002B';
+}
+
+.btn-accordion span.active::after{
+    content: '\2212';
+}
